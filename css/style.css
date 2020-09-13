@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    color: #333333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+figure,
+p,
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 815px;
+    color: #ffffff;
+    position: relative;
+}
+
+.header-inner {
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    background-color: #1B1310;
+}
+
+.header-logo {
+    height: 100%;
+}
+
+.header-logo p {
+    height: 100%;
+    font-size: 26px;
+    line-height: 74px;
+    margin-left: 120px;
+    color: #ffffff;
+}
+
+
+.header-nav li a {
+    color: #ffffff;
+    line-height: 74px;
+}
+
+.header-nav ul {
+    margin: 0 120px 0 0;
+    padding: 0;
+    display: flex;
+}
+
+/*--------- 
+ハンバーガーボタン 開始
+------------*/
+
+.hamburger {
+    width: 100%;
+    height: 590px;
+    display: none;
+}
+
+.hamburger-inner {
+    opacity: 0;
+}
+
+.open .hamburger-inner {
+    left: 0;
+    opacity: 1;
+}
+
+.nav .hamburger-inner ul {
+    margin: 0;
+    padding: 0;
+    width: 64px;
+    height: 665px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    text-align: center;
+}
+
+.nav .hamburger-inner ul li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .hamburger-inner ul li a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: .05em;
+    line-height: 1.87;
+    padding-bottom: 50px;
+    transition-duration: 0.2s;
+}
+
+.hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hamburger-btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.hamburger-btn span:nth-child(1) {
+    top: 4px;
+}
+
+.hamburger-btn span:nth-child(2) {
+    top: 14px;
+}
+
+.hamburger-btn span:nth-child(3) {
+    bottom: 4px;
+}
+
+.open .hamburger-btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+}
+
+.open .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .hamburger-btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+}
+
+.open .hamburger {
+    background-image: none;
+}
+
+.open .header-ttl {
+    display: none;
+}
+
+.open .header {
+    display: none;
+    background-color:#1B1310;
+    /* position: absolute;
+    z-index: 999; */
+}
+
+/*--------- 
+ハンバーガーボタン 終了
+------------*/
+
+.header li {
+    padding-left: 53px;
+}
+
+.header-ttl_img {
+    width: 100%;
+    height: 740px;
+    background-image: url(../img/fv-bgi@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} 
+
+.header-ttl {
+    width: 449px;
+    height: 136px;
+    border: 1px solid #ffffff;
+    margin: 0px auto;
+    position: absolute;
+    top: 376px;
+    left: 496px;
+}
+
+.header-ttl h1 {
+    color: #ffffff;
+    font-size: 50px;
+    width: 365px;
+    height: 67px;
+    line-height: 136px;
+    letter-spacing: .05em;
+    margin: 0;
+    margin: 0 auto;
+    font-family: Roboto;
+}
+
+.main {
+    width: 1030px;
+    margin: 0 auto;
+}
+
+.main-about {
+    height: 335px;
+    margin: 100px 0 150px 0;
+}
+
+.main-about h2 {
+    text-align: center;
+    margin-bottom: 77px;
+    font-size: 36px;
+    line-height: 0.6;
+    letter-spacing: .05em;
+}
+
+.main-about h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    font-family: Noto Sans CJK JP;
+    margin-bottom: 45px;
+}
+
+.main-about p {
+    font-size: 14px;
+    line-height: 2.1;
+    letter-spacing: 0.05em;
+}
+
+.main-service {
+    height: 648px;
+    margin-bottom: 150px;
+}
+
+.main-service h2 {
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 0.6;
+    letter-spacing: .05em;
+}
+
+.main-service_branding {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.camera img,
+.support img,
+.main-news_inner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-service_branding-contents,
+.main-service_support-contents {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+.main-service_branding-contents h3,
+.main-service_support-contents h3 {
+    font-family: Noto Sans CJK JP;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    margin-bottom: 45px;
+}
+
+.main-service_branding-contents p,
+.main-service_support-contents p {
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 2.1;
+    font-family: Noto Sans CJK JP;
+}
+
+.main-service_support {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-news {
+    height: 441px;
+    margin-bottom: 157px;
+}
+
+.main-news h2 {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: .1;
+    line-height: 1.3;
+    margin-bottom: 70px;
+}
+
+.main-news_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 157px;
+}
+
+.main-news_inner div {
+    margin-right: 34px;
+}
+
+.main-news_inner p {
+    width: 254px;
+    height: auto;
+    margin: 0 auto;
+    padding: 26px 0 25px 0;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 13px;
+    line-height: 1.9;
+    letter-spacing: .05em;
+}
+
+.main-contact {
+    width: 700px;
+    height: 628px;
+    margin: 0 auto 50px;
+}
+
+.main-contact h2 {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: .1;
+    line-height: 1.3;
+    margin-bottom: 75px;
+}
+
+label {
+    font-size: 16px;
+    letter-spacing: .05em;
+    line-height: 1.8;
+    font-family: Hiragino Kaku Gothic ProN;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 171px;
+    margin-bottom: 50px;
+}
+
+.button {
+    width: 235px;
+    height: 59px;
+    margin: 0 auto;
+}
+
+button {
+    color: #ffffff;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    font-size: 20px;
+    letter-spacing: .05em;
+    line-height: 1.5;
+}
+
+.footer {
+    width: 100%;
+    height: 79px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.footer p {
+    color: #ffffff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 2.1;
+    padding-top: 29px;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+
+    .header {
+        height: 665px; 
+    }
+
+    .header-logo p {
+        margin-left: 25px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-ttl_img {
+        width: 100%;
+        height: 0px;
+        background-image: none;
+    }
+
+    .hamburger {
+        display: block;
+        background-image: url(../img/fv-bgi_sp@2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header-ttl {
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: 41px;
+        top: 320px;
+    }
+
+    .header-ttl h1 {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+    }
+
+    .main {
+        width: 92%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .main-about,
+    .main-service,
+    .main-news {
+        height: auto;
+        font-weight: bold;
+    }
+
+    .main-about h2,
+    .main-service h2 {
+        margin-bottom: 75px;
+    }
+
+    .main-about h3,
+    .main-service h3 {
+        margin-bottom: 34px;
+        font-size: 20px;
+    }
+
+    .main-service_branding {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .main-service_support {
+        display: block;
+    }
+
+    .main-service_branding-contents,
+    .main-service_support-contents {
+        margin-bottom: 40px;
+    }
+
+    .main-news,
+    .main-contact {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-news_inner {
+        display: block;
+    }
+
+    .main-contact {
+        margin-bottom: 70px;
+    }
+
+    .news01,
+    .news02,
+    .news03 {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        margin-bottom: 50px;
+        box-shadow: 0 0 6px 1px rgb(0, 0, 0, .4);
+    }
+}
